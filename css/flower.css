@@ -18,53 +18,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Center content vertically */
   overflow: hidden;
   color: #ff9494;
   font-family: courier;
-  position: relative;
-}
-
-/* Add a pseudo-element for the blur effect */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
-  backdrop-filter: blur(5px); /* Blur effect */
-  z-index: -1; /* Place it behind the content */
 }
 
 #thankyou {
-  width: 90%;
+  width: 90%; /* Adjust width for smaller screens */
   text-align: center;
-  font-size: 24px;
+  margin: 20px 0; /* Add margin for spacing */
   z-index: 1000;
   position: relative;
-  margin-bottom: 20px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  color: #ff6b6b; /* Highlight text color */
-  font-weight: bold; /* Make text bold */
-}
-
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-  #thankyou {
-    font-size: 18px;
-    margin-bottom: 10px;
-    padding: 15px;
-  }
+  font-size: 16px; /* Smaller font size for mobile */
 }
 
 .flower {
   position: relative;
-  z-index: 1; /* Ensure flowers are above the blurred background */
+  transform: scale(0.8); /* Scale down the animation for mobile */
 }
 
 .flower__glass {
@@ -248,11 +219,9 @@ body::before {
 .flower__leaf--2 {
   transform: translateX(-50%) rotate(-30deg);
 }
-
 .flower__leaf--3 {
   transform: translateX(-50%) rotate(-50deg);
 }
-
 .flower__leaf--4 {
   transform: translateX(-50%) rotate(-70deg);
 }
